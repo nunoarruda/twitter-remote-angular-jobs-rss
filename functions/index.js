@@ -1,5 +1,5 @@
-const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+const functions = require('firebase-functions');
 const RSS = require('rss');
 
 admin.initializeApp(functions.config().firebase);
@@ -11,16 +11,12 @@ exports.rss = functions.https.onRequest((request, response) => {
         site_url: 'https://us-central1-twitter-jobs.cloudfunctions.net'
     });
 
-    admin.database().ref('/').limitToLast(100).once('value', snapshot => {
+    admin.firestore().collection('tweets').orderBy('created_at', 'desc').limit(100).get().then(snapshot => {
         const tweets = [];
 
-        snapshot.forEach(child => {
-            tweets.push(child.val());
+        snapshot.forEach(doc => {
+            tweets.push(doc.data());
         });
-
-        // by default, Firebase lists items in ascending order (oldest first)
-        // we want descending order (newest first) so we reverse the array
-        tweets.reverse();
 
         // create feed items
         tweets.forEach(tweet => {
