@@ -12,14 +12,11 @@ exports.rss = functions.https.onRequest((request, response) => {
     });
 
     admin.firestore().collection('tweets').orderBy('created_at', 'desc').limit(100).get().then(snapshot => {
-        const tweets = [];
 
         snapshot.forEach(doc => {
-            tweets.push(doc.data());
-        });
+            const tweet = doc.data();
 
-        // create feed items
-        tweets.forEach(tweet => {
+            // create feed items
             feed.item({
                 title: `${tweet.name} (@${tweet.screen_name})`,
                 description: tweet.text,
@@ -32,5 +29,6 @@ exports.rss = functions.https.onRequest((request, response) => {
         // serve rss
         response.contentType('application/rss+xml');
         response.send(feed.xml());
+        
     });
 });
