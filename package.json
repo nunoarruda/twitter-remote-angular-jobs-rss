@@ -11,12 +11,12 @@
     "url": "git+https://github.com/nunoarruda/twitter-jobs.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nunoarruda/twitter-jobs/issues"
   },
   "homepage": "https://github.com/nunoarruda/twitter-jobs#readme",
   "devDependencies": {
-    "firebase-tools": "^3.15.3"
+    "firebase-tools": "^4.2.1"
   }
 }
