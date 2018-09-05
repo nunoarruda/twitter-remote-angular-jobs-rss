@@ -1,21 +1,21 @@
 {
-  "name": "twitter-jobs",
+  "name": "twitter-remote-angular-jobs-rss",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "functions/lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nunoarruda/twitter-jobs.git"
+    "url": "git+https://github.com/nunoarruda/twitter-remote-angular-jobs-rss.git"
   },
-  "author": "",
+  "author": "Nuno Arruda <nuno@nunoarruda.com> (https://nunoarruda.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nunoarruda/twitter-jobs/issues"
+    "url": "https://github.com/nunoarruda/twitter-remote-angular-jobs-rss/issues"
   },
-  "homepage": "https://github.com/nunoarruda/twitter-jobs#readme",
+  "homepage": "https://github.com/nunoarruda/twitter-remote-angular-jobs-rss#readme",
   "devDependencies": {
     "firebase-tools": "^4.2.1"
   }
