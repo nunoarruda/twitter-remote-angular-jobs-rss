@@ -9,8 +9,10 @@ db.settings({ timestampsInSnapshots: true });
 export const rss = functions.https.onRequest(async (request, response) => {
   const feed = new RSS({
     title: "Twitter Remote Angular Jobs RSS",
-    feed_url: "https://us-central1-twitter-jobs.cloudfunctions.net/rss",
-    site_url: "https://us-central1-twitter-jobs.cloudfunctions.net"
+    feed_url:
+      "https://us-central1-twitter-remote-angular-jobs.cloudfunctions.net/rss",
+    site_url:
+      "https://us-central1-twitter-remote-angular-jobs.cloudfunctions.net"
   });
 
   // get tweets from database
