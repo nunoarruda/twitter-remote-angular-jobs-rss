@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/nunoarruda/twitter-remote-angular-jobs-rss#readme",
   "devDependencies": {
-    "firebase-tools": "^4.2.1"
+    "firebase-tools": "^7.4.0"
   }
 }
