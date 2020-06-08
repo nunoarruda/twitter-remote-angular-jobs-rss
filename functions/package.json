@@ -11,17 +11,17 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "firebase-admin": "~8.10.0",
-    "firebase-functions": "^3.6.0",
+    "firebase-admin": "~8.12.1",
+    "firebase-functions": "^3.6.2",
     "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/rss": "0.0.28",
-    "tslint": "~6.1.1",
-    "typescript": "~3.8.3"
+    "tslint": "~6.1.2",
+    "typescript": "~3.9.5"
   },
   "private": true,
   "engines": {
-    "node": "8"
+    "node": "10"
   }
 }

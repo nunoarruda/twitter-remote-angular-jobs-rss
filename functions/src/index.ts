@@ -12,7 +12,7 @@ export const rss = functions.https.onRequest(async (request, response) => {
     feed_url:
       "https://us-central1-twitter-remote-angular-jobs.cloudfunctions.net/rss",
     site_url:
-      "https://us-central1-twitter-remote-angular-jobs.cloudfunctions.net"
+      "https://us-central1-twitter-remote-angular-jobs.cloudfunctions.net",
   });
 
   // get tweets from database
@@ -28,7 +28,7 @@ export const rss = functions.https.onRequest(async (request, response) => {
   }
 
   // loop thru each tweet
-  querySnapshot.forEach(doc => {
+  querySnapshot.forEach((doc) => {
     const tweet = doc.data();
 
     // create feed item
@@ -37,7 +37,7 @@ export const rss = functions.https.onRequest(async (request, response) => {
       description: tweet.text,
       url: `https://twitter.com/${tweet.screen_name}/status/${tweet.id_str}`,
       guid: tweet.id_str,
-      date: tweet.created_at.toDate()
+      date: tweet.created_at.toDate(),
     });
   });
 
